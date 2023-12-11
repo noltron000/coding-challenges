@@ -1,0 +1,10 @@
+{
+	"devDependencies": {
+		"typescript": "^5.3.3"
+	},
+	"name": "coding-challenges",
+	"version": "0.0.0",
+	"description": "My solutions to some coding challenges.",
+	"author": "Noltron000",
+	"license": "MIT"
+}
