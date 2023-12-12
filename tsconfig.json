@@ -1,7 +1,10 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
-		"module": "ESNext",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"noEmit": true,
+		"allowImportingTsExtensions": true,
 		"paths": {
 			"library/*": ["./source/library/*"],
 		},
