@@ -1,6 +1,24 @@
+/*\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+AUTHOR: Noltron000
+LICENSE: 3-Clause BSD (Attribution Required)
+GITHUB: https://github.com/noltron000/coding-challenges/
+CODESIGNAL: https://app.codesignal.com/profile/noltron000/
+
+------------------------------------------------------------
+
+Like my solutions? You can help me out in a couple of ways:
+- Star my GitHub Repository & follow me on GitHub ⭐
+- Upvote my solution on CodeSignal & become my CodeFriend 😄
+
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
+
 type Coordinates = [number, number]
 const GRID_LENGTH = 8
 
+/**
+Converts a board coordinates string to an array.
+**/
 const getPosFromString = (cellString: string): Coordinates => {
 	const [col, row] = cellString.toLowerCase( ).split("")
 
@@ -10,6 +28,9 @@ const getPosFromString = (cellString: string): Coordinates => {
 	return [x, y]
 }
 
+/**
+Determines possible moves for a knight, given its board coordinates.
+**/
 const getKnightMoves = (string: string) => {
 	const pos = getPosFromString(string)
 	const vectorDirection = [1, -1]
@@ -48,6 +69,9 @@ const getKnightMoves = (string: string) => {
 	return validMoveCombos
 }
 
+/**
+Counts the results from the previous function.
+**/
+const countKnightMoves = (s: string) => getKnightMoves(s).length
 
-const solution = (s: string) => getKnightMoves(s).length
-export default solution
+export default countKnightMoves
